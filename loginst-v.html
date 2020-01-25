@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login Form</title>
+  <link rel="stylesheet" type="text/css" href="login.css">  
+</head>
+
+<body>
+  <?php include('login(navbar).html')?>
+  
+<div id="header">
+
+</div>
+
+  <div id="bg">
+    <div class="module" id="mod">
+      <ul>
+        <li class="tab activeTab" onclick="switchToLogIn()">LOGIN</li>
+        <li class="tab" onclick="switchToSignUp()">SIGN UP</li>
+      </ul>
+
+      <form  id="login-form"class="form">
+        <input type="text" placeholder="Email-id" class="textbox" />
+        <input type="password" placeholder="Password" class="textbox" />
+        <input type="submit" value="Submit" class="button">
+        <a href="#" class="Forgot">Forgot your password?</a>
+      </form>
+    
+   
+      <form id="signup-form" onSubmit="return checkPassword(this)" class="form" style="display: none;">
+        <input type="text" placeholder="Name" class="textbox" />
+        <input type="text" placeholder="Email-id" class="textbox" />
+        <input type="password" name="password1" placeholder="Enter Password" class="textbox" />
+        <input type="password" name="password2" placeholder="Confirm Password" class="textbox" />        
+        <input type="submit" value="Submit" class="button">
+        </form>
+    
+      </div>
+  </div>
+  <script>
+    function switchToSignUp() {
+      document.querySelector('#login-form').style.display = 'none';
+      document.querySelector('#signup-form').style.display = 'block';      
+      document.querySelector('#mod').style.height='80%';
+      setActiveTab(1);
+    }
+    function switchToLogIn() {
+      document.querySelector('#login-form').style.display = 'block';
+      document.querySelector('#signup-form').style.display = 'none';
+      document.querySelector('#mod').style.height='70%';
+      setActiveTab(0);
+    }
+    let activeTab = 0;
+    function setActiveTab(i) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs[activeTab].classList.remove('activeTab');
+      activeTab = i;
+      tabs[i].classList.add('activeTab');
+    }
+    function checkPassword(form) { 
+                password1 = form.password1.value; 
+                password2 = form.password2.value;                 
+                if (password1 == '') 
+                    alert ("Please enter Password");                                  
+                else if (password2 == '') 
+                    alert ("Please enter confirm password");                                            
+                else if (password1 != password2) { 
+                    alert ("\nPassword did not match: Please try again...") 
+                    return false; 
+                }                                 
+            }
+
+ 
+  
+  </script>
+</body>
+
+</html>
