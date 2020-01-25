@@ -1,7 +1,7 @@
 <?php
 $con=mysqli_connect('localhost','root');
 mysqli_select_db($con,'menti');
-
+#commenting
 $selected=$_POST['codeid'];
 $button=$_POST['button'];
 $fetch="SELECT uniqueid from table1";
