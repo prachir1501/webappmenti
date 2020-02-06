@@ -23,6 +23,31 @@ img.logo2{
   top: 10px;   
 }
 
+label.remember
+{
+   
+    position: relative;
+    bottom: 87px;
+
+  
+}
+
+#submit{
+
+ 
+   position: relative;
+   top: 30px;
+
+}
+
+#pass{
+
+position: relative;
+   right: 30px;
+   top: 25px;
+}
+
+
 
 body{
   
@@ -156,3 +181,4 @@ a{
 .Forgot:hover{
     text-decoration: underline !important;
 }
+
