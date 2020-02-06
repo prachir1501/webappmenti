@@ -5,10 +5,24 @@
 
 img.logo1{
 
-  height:175px;
-    width:175px;
-     border-radius: 50%
+  height:125px;
+  width:125px;
+  border-radius: 50%;
+  position: absolute;
+  left: 25px;
+  top: 10px;   
 }
+
+img.logo2{
+
+  height:125px;
+  width:125px;
+  border-radius: 50%;
+  position: absolute;
+  right: 25px;
+  top: 10px;   
+}
+
 
 body{
   
