@@ -3,6 +3,13 @@
   padding:0;
 }
 
+img.logo1{
+
+	height:175px;
+    width:175px;
+     border-radius: 50%
+}
+
 body{
   
   
