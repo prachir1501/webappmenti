@@ -53,9 +53,12 @@ body{
   
   
   font-family:'Montserrat', sans-serif;
-  background-image: url(wall.jpg);
+  background-image: url(new7.jpg);
+  background-repeat: no-repeat;
+  background-size:1900px 1000px;
   background-color: rgba(255,255,255,0.7);
     background-blend-mode: lighten;
+
 }
 
 a{  
